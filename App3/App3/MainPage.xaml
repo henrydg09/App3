@@ -1,11 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:App3"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:App3" 
              x:Class="App3.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+
+    <StackLayout>
+        
+        <Picker x:Name="Picker" Title="Disciplina">
+            <Picker.Items>
+                <x:String>1 - Cálculo</x:String>
+                <x:String>2 - Cálculo 2</x:String>
+                <x:String>3 - Introdução a Engenharia</x:String>
+                <x:String>4 - Projetos de Engenharia</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="Picker2"  Title="Professor">
+            <Picker.Items>
+            <x:String>1 - Maria</x:String>
+            <x:String>2 - José</x:String>
+            <x:String>3 - João</x:String>
+            <x:String>4 - Ana</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry x:Name="Entry1" Placeholder="Matrícula do Aluno" />
+        <Entry x:Name="Entry2" Keyboard="Numeric" Placeholder="nota" />
+
+
+
+        <Label x:Name="Label1" IsVisible="false"
+               Text="Nota registrada" TextColor="DarkGreen" />
+        <Label x:Name="Label2" IsVisible="false"
+               Text="Nao foi possivel registrar nota" TextColor="Red" />
+        <Label x:Name="Label3" IsVisible="false"
+               Text="Aprovado" TextColor="DarkGreen" />
+        <Label x:Name="Label4" IsVisible="false"
+               Text="Reprovado" TextColor="Red" />
+
+
+
+        <Button x:Name="Button2" Text="avaliar"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked" />
+
+
+    </StackLayout>
 
 </ContentPage>
